@@ -35,12 +35,12 @@ Hooks.on("init", () => {
 
   document.body.addEventListener("keydown", (ev) => {
     if (ev.ctrlKey) mars5e.advDiv.dataset.advantage = 0;
-    if (ev.altKey || ev.shiftKey) mars5e.advDiv.dataset.advantage = 2;
+    if (ev.shiftKey) mars5e.advDiv.dataset.advantage = 2;
     if (mars5e.advDiv.dataset.advantage !== "1") mars5e.isKeyPressed = true;
   });
   document.body.addEventListener("keyup", (ev) => {
     if (ev.ctrlKey) mars5e.advDiv.dataset.advantage = 0;
-    else if (ev.altKey || ev.shiftKey) mars5e.advDiv.dataset.advantage = 2;
+    else if (ev.shiftKey) mars5e.advDiv.dataset.advantage = 2;
     else {
       mars5e.advDiv.dataset.advantage = 1;
       mars5e.isKeyPressed = false;
